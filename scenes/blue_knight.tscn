@@ -204,7 +204,7 @@ script = ExtResource("1_l5bn3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_o2cs2")
-animation = &"attack2"
+animation = &"idle"
 offset = Vector2(0, -35.24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
