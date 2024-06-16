@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://sbpe5b5kur1r"]
+
+[ext_resource type="Texture2D" uid="uid://duikke7ctsi53" path="res://assets/Factions/Knights/Buildings/Castle/Castle_Blue.png" id="1_8rblr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qpb7f"]
+radius = 42.0
+height = 264.0
+
+[node name="BlueCastle" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8rblr")
+offset = Vector2(0, -86.805)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -19.845)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qpb7f")

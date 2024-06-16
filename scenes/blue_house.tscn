@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbp3vkhnwkwkp"]
+
+[ext_resource type="Texture2D" uid="uid://c58uq74g62arq" path="res://assets/Factions/Knights/Buildings/House/House_Blue.png" id="1_eco4c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe0rc"]
+size = Vector2(85, 46)
+
+[node name="BlueHouse" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_eco4c")
+offset = Vector2(0, -69.02)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -23)
+shape = SubResource("RectangleShape2D_pe0rc")

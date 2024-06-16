@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp4ejoe2xalam"]
+
+[ext_resource type="Texture2D" uid="uid://cbki3r27yja03" path="res://assets/Resources/Trees/Tree.png" id="1_qlol2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8basm"]
+atlas = ExtResource("1_qlol2")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q33k"]
+atlas = ExtResource("1_qlol2")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf8ee"]
+atlas = ExtResource("1_qlol2")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyx3g"]
+atlas = ExtResource("1_qlol2")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mpqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8basm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q33k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf8ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyx3g")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xurmw"]
+radius = 6.0
+height = 26.0
+
+[node name="PineTree" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4mpqo")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.899084
+offset = Vector2(0, -74.165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xurmw")
